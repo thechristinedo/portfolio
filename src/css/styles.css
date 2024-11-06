@@ -34,6 +34,7 @@ p {
 
 body {
   background-color: rgb(var(--main-bg-color));
+  transition: background-color 0.3s linear;
 }
 
 section {
@@ -56,6 +57,7 @@ section {
   font-size: 1.2rem;
 
   height: 90px;
+  transition: background-color 0.3s linear;
   background-color: rgb(var(--main-bg-color));
   z-index: 10;
 }

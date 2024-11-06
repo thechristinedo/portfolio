@@ -1,5 +1,6 @@
-const themeBtn = document.querySelector(".navbar__list--button");
 const body = document.body;
+const themeBtn = document.querySelector(".navbar__list--button");
+const themeIcon = document.querySelector(".theme--icon");
 const trailLeft = document.querySelector(".trail__color--left");
 const trailRight = document.querySelector(".trail__color--right");
 
@@ -17,9 +18,13 @@ const toggleTrailColor = function () {
   trailBlue = !trailBlue;
 };
 
+const toggleIcon = function () {
+  themeIcon.classList.toggle("fa-lightbulb");
+  themeIcon.classList.toggle("fa-moon");
+};
+
 themeBtn.addEventListener("click", function () {
   body.classList.toggle("light--mode");
-  console.log(trailLeft, trailRight);
-
   toggleTrailColor();
+  toggleIcon();
 });
