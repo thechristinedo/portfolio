@@ -5,24 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/styles.css">
+    <script src="https://kit.fontawesome.com/b675451676.js" crossorigin="anonymous"></script>
     <title>Christine Do | Developer</title>
 </head>
 
 <body>
-    <div class="hero">
-        <div class="hero__main">
-            <div class="hero__text">
-                <h1 class="hero--name">Christine Do</h1>
-                <h2 class="hero--description">a front-end developer</h2>
-            </div>
-            <div class="hero__foot">
-                <p class="hero--location">Houston, TX</p>
-            </div>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a class="logo" href="#">Christine Do</a>
+            <ul class="navbar__list">
+                <li class="navbar__list--links"><a href="#about">About</a></li>
+                <li class="navbar__list--links"><a href="#projects">Projects</a></li>
+                <li class="navbar__list--links"><a href="#contact">Contact</a></li>
+                <li class="navbar__list--button"><i class="fa-regular fa-moon"></i></li>
+            </ul>
         </div>
-        <div class="hero__side">
-            <img class="hero--img" src="src/assets/main.png" alt="">
-        </div>
-    </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero__main">
+                <div class="hero__text">
+                    <h1 class="hero--name">Christine Do</h1>
+                    <h2 class="hero--description">a front-end developer</h2>
+                </div>
+                <div class="hero__foot">
+                    <p class="hero--location"><i class="fa-solid fa-location-dot"></i> Houston, TX</p>
+                </div>
+            </div>
+            <div class="hero__side">
+                <img class="hero--img" src="src/assets/main.png" alt="">
+            </div>
+        </section>
+
+
+        <section id="about" class="about"></section>
+        <section id="projects" class="projects"></section>
+        <section id="contact" class="contact"></section>
+    </main>
 
     <svg class="trail" viewBox="0 0 1 1">
         <defs>
