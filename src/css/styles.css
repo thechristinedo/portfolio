@@ -2,7 +2,7 @@
 
 :root {
   --main-color: 255, 255, 255;
-  --secondary-color: 60, 18, 167;
+  --secondary-color: 19, 84, 206;
   --main-bg-color: 0, 0, 0;
 }
 
@@ -72,6 +72,12 @@ section {
   display: flex;
   gap: 1.5rem;
   cursor: pointer;
+}
+
+.navbar__list a:hover,
+.navbar__list i:hover {
+  transition: 0.3s;
+  color: rgb(var(--secondary-color));
 }
 
 .section__header {
@@ -167,6 +173,7 @@ img {
   left: 0;
   width: 100%;
   height: 0.75rem;
+  /* background-color: rgb(var(--secondary-color)); */
   background-color: rgb(var(--secondary-color));
   opacity: 0.6;
   z-index: -1;
