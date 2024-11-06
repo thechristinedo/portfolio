@@ -136,6 +136,7 @@ img {
 
 .about__container {
   border: 1px solid white;
+  backdrop-filter: blur(2rem);
   padding: 10rem 0;
   max-width: 1024px;
   margin: 0 auto;
@@ -144,10 +145,6 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.about__container:hover {
-  backdrop-filter: blur(2rem);
 }
 
 .about__text {
