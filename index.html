@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="icon" href="src/assets/icon.png">
     <script src="https://kit.fontawesome.com/b675451676.js" crossorigin="anonymous"></script>
+    <script defer src="src/js/script.js"></script>
     <title>Christine Do | Developer</title>
 </head>
 
@@ -29,8 +31,14 @@
                     <h1 class="hero--name">Christine Do</h1>
                     <h2 class="hero--description">a front-end developer</h2>
                 </div>
-                <div class="hero__foot">
-                    <p class="hero--location"><i class="fa-solid fa-location-dot"></i> Houston, TX</p>
+                <p class="hero--location"><i class="fa-solid fa-location-dot"></i> Houston, TX</p>
+                <div class="hero__contact">
+                    <button class="resume">Resume <i class="fa-regular fa-circle-down"></i></button>
+                    <a href="https://www.linkedin.com/in/thechristinedo/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    </i>
+                    <a href="https://github.com/thechristinedo" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:thechristinedo"><i class="fa-regular fa-envelope"></i></a>
                 </div>
             </div>
             <div class="hero__side">
@@ -39,22 +47,64 @@
         </section>
 
 
-        <section id="about" class="about"></section>
+        <section id="about" class="about">
+            <div class="about__container">
+                <div class="about__text">
+                    <h3 class="section__header">ABOUT</h3>
+                    <h2 class="about__text--title">Hi, I'm Christine!</h2>
+                    <p class="about__text--body">I recently graduated from <span class="text--custom">University of
+                            Houston</span> with a
+                        Bachelor's in
+                        <span class="text--custom">Computer Science</span> a minor in
+                        <span class="text--custom">Mathematics</span>. I focus on design and user experiences when
+                        building a website, maintaining
+                        uniformity
+                        that is pleasing to the consumer's eye and striking a parallel with their interest. During my
+                        free
+                        time, I enjoy finding new challenges for me through seeking new hobbies and acheiving mastery.
+                    </p>
+                </div>
+                <div class="about__skills">
+                    <div class="skills--div">
+                        <h3 class="skills--header">PROGRAMMING LANGUAGES</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>C++</li>
+                        </ul>
+                    </div>
+                    <div class="skills--div">
+                        <h3 class="skills--header">FRONTEND DEVELOPMENT</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+                    <div class="skills--div">
+                        <h3 class="skills--header">BACKEND DEVELOPMENT</h3>
+                        <ul>
+                            <li>Flask</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="projects" class="projects"></section>
         <section id="contact" class="contact"></section>
     </main>
 
     <svg class="trail" viewBox="0 0 1 1">
         <defs>
-            <!-- <linearGradient id="trail-gradient" x1="0%" y1="0%" x2="100%" y2="0%"> -->
             <linearGradient id="trail-gradient">
                 <stop offset="0%" style="stop-color: #ff7a18; stop-opacity: 1;" />
                 <stop offset="100%" style="stop-color: #af002d; stop-opacity: 1;" />
             </linearGradient>
         </defs>
-        <path d=""></path>
+        <path class="trail__path" d=""></path>
     </svg>
 
+    <!-- <linearGradient id="trail-gradient" x1="0%" y1="0%" x2="100%" y2="0%"> -->
     <script src="src/js/trail.js"></script>
 </body>
 

@@ -38,6 +38,10 @@ body {
   background-color: var(--main-bg-color);
 }
 
+section {
+  padding: 10rem 0;
+}
+
 .navbar {
   position: sticky;
   top: 0;
@@ -48,6 +52,8 @@ body {
   font-size: 1.2rem;
 
   height: 90px;
+  background-color: var(--main-bg-color);
+  z-index: 10;
 }
 
 .navbar__container {
@@ -60,13 +66,17 @@ body {
 
 .navbar__list {
   display: flex;
-  gap: 10px;
+  gap: 1.5rem;
   cursor: pointer;
+}
+
+.section__header {
+  margin-bottom: 1rem;
 }
 
 .hero {
   height: calc(100vh - 90px);
-  width: 50%;
+  max-width: 1024px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -77,12 +87,119 @@ body {
   font-size: 2rem;
 }
 
+.hero__text {
+  margin-bottom: 1rem;
+}
+
+.hero--location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.hero__contact {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.resume {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--main-color);
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0.5rem;
+}
+
+.resume:hover,
+.resume:hover i {
+  transition: 0.3s;
+  background-color: var(--main-color);
+  color: var(--main-bg-color);
+}
+
+.resume:hover {
+  box-shadow: 0 0 3rem var(--secondary-color);
+}
+
 img {
   height: 400px;
   width: 400px;
   border-radius: 50%;
 }
 
+.about__container {
+  border: 1px solid white;
+  padding: 10rem 0;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__container:hover {
+  backdrop-filter: blur(2rem);
+}
+
+.about__text {
+  width: 60%;
+  margin-bottom: 3rem;
+}
+
+.text--custom {
+  position: relative;
+}
+
+.text--custom::after {
+  position: absolute;
+  content: "";
+  bottom: 0.25rem;
+  left: 0;
+  width: 100%;
+  height: 0.75rem;
+  background-color: var(--secondary-color);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.about__skills {
+  width: 60%;
+}
+
+.skills--div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Hind";
+  margin-bottom: 0.5rem;
+}
+
+.skills--div h3 {
+  font-size: 1.25rem;
+}
+
+.skills--div ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.skills--div li {
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0.5rem;
+  padding: 0.1rem 0.7rem;
+}
+
+/* TRAIL */
 .trail {
   position: fixed;
   top: 0;
@@ -91,26 +208,11 @@ img {
   z-index: -1;
 }
 
-.trail path {
+.trail__path {
   fill: none;
   stroke: url(#trail-gradient);
-  stroke-width: 8px;
+  stroke-width: 0.5rem;
   stroke-linecap: round;
   stroke-linejoin: round;
-  filter: blur(5px);
+  filter: blur(0.2rem);
 }
-
-/* .navbar__list a {
-  position: relative;
-}
-
-.navbar__list a:hover::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.2em;
-  background-color: var(--secondary-color);
-  z-index: -1;
-} */

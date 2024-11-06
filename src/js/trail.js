@@ -1,5 +1,5 @@
 const svg = document.querySelector(".trail");
-const path = document.querySelector("path");
+const path = document.querySelector(".trail__path");
 
 let points = [];
 let segments = 100;
