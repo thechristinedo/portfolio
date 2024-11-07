@@ -39,6 +39,7 @@ body {
 
 section {
   padding: 10rem 0;
+  /* border: 1px solid white; */
 }
 
 .light--mode {
@@ -207,6 +208,67 @@ img {
   border: 1px solid rgba(var(--main-color), 0.25);
   border-radius: 0.5rem;
   padding: 0.1rem 0.7rem;
+}
+
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__container {
+  max-width: 1024px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__text--title {
+  margin-bottom: 3rem;
+}
+
+.contact__list {
+  display: flex;
+  gap: 5rem;
+  /* font-family: "Montserrat"; */
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.contact__list--link {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.contact__list--link::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  transition: 0.3s;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgb(var(--secondary-color))
+  );
+  border-radius: 5rem;
+}
+
+.contact__list--link:hover::after {
+  width: 100%;
+  box-shadow: 0 0 5rem rgb(var(--secondary-color));
+}
+
+.contact__list i {
+  font-size: 2rem;
+  margin-right: 0.5rem;
 }
 
 /* TRAIL */
