@@ -148,7 +148,7 @@ img {
 }
 
 .about__container {
-  border: 1px solid rgb(var(--main-color));
+  border: 0.15rem solid rgb(var(--main-color));
   backdrop-filter: blur(2rem);
   padding: 10rem 0;
   max-width: 1024px;
