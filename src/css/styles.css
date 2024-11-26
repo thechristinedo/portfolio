@@ -26,6 +26,7 @@
   --fs-nav: var(--fs-600);
   --fs-primary-header: var(--fs-800);
   --fs-secondary-header: var(--fs-700);
+  --fs-section-header: var(--fs-600);
   --fs-body: var(--fs-400);
 }
 
@@ -77,11 +78,6 @@ body {
 p {
   font-family: "Hind";
 }
-
-section {
-  padding: 10rem 0;
-}
-
 /*********************************************************************************/
 
 .light--mode {
@@ -123,11 +119,16 @@ section {
   color: rgb(var(--secondary-color));
 }
 
+@media (max-width: 50em) {
+  .navbar ul {
+    display: none;
+  }
+}
+
 /*********************************************************************************/
 
 .hero {
-  height: calc(100vh - 90px);
-  height: 100%;
+  min-height: calc(100vh - 90px);
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -170,6 +171,7 @@ section {
 .hero__side {
   max-width: 400px;
   width: 100%;
+  height: auto;
 }
 
 img {
@@ -180,29 +182,23 @@ img {
 @media (max-width: 50em) {
   .hero {
     display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(0, max-content));
     justify-content: center;
-    gap: 2rem;
+    align-content: center;
   }
 }
 
 /*********************************************************************************/
 
 .about__container {
+  /* backdrop-filter: blur(2rem); */
   border: 0.15rem solid rgb(var(--main-color));
-  backdrop-filter: blur(2rem);
-  padding: 10rem 0;
-  max-width: 1024px;
-  margin: 0 auto;
+  padding: clamp(2rem, 10vw, 10rem);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-
-.about__text {
-  width: 60%;
-  margin-bottom: 3rem;
+  gap: 3rem;
 }
 
 .text--custom {
@@ -216,31 +212,24 @@ img {
   left: 0;
   width: 100%;
   height: 0.75rem;
-  /* background-color: rgb(var(--secondary-color)); */
   background-color: rgb(var(--secondary-color));
   opacity: 0.6;
   z-index: -1;
 }
 
-.about__skills {
-  width: 60%;
-}
-
 .skills--div {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
-  font-family: "Hind";
-  margin-bottom: 0.5rem;
-}
 
-.skills--div h3 {
-  font-size: 1.25rem;
+  gap: 0.5rem;
+  font-family: var(--ff-heading);
+  margin-bottom: 1rem;
 }
 
 .skills--div ul {
   display: flex;
-  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .skills--div li {
@@ -248,6 +237,7 @@ img {
   border: 1px solid rgba(var(--main-color), 0.25);
   border-radius: 0.5rem;
   padding: 0.1rem 0.7rem;
+  text-align: center;
 }
 
 /*********************************************************************************/
@@ -370,6 +360,18 @@ img {
   font-size: var(--fs-body);
 }
 
+.fs-primary-header {
+  font-size: var(--fs-primary-header);
+}
+
+.fs-secondary-header {
+  font-size: var(--fs-secondary-header);
+}
+
+.fs-section-header {
+  font-size: var(--fs-section-header);
+}
+
 .container {
   --max-width: 1024px;
   --padding: 2rem;
@@ -391,6 +393,10 @@ img {
 
 .margin-bottom-700 {
   margin-bottom: 3rem;
+}
+
+.padding-block-600 {
+  padding-block: 10rem;
 }
 
 /* TRAIL */
