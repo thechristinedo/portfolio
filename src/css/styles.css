@@ -252,24 +252,13 @@ img {
 /*********************************************************************************/
 
 .contact__container {
-  max-width: 1024px;
-  margin: 0 auto;
-
   display: flex;
   flex-direction: column;
 }
 
-.contact__text--title {
-  margin-bottom: 3rem;
-}
-
 .contact__list {
   display: flex;
-  gap: 5rem;
-  /* font-family: "Montserrat"; */
-  font-family: "Inter";
-  font-weight: 500;
-  font-size: 1.125rem;
+  gap: 4rem;
 }
 
 .contact__list--link {
@@ -301,7 +290,7 @@ img {
 }
 
 .contact__list i {
-  font-size: 2rem;
+  font-size: var(--fs-800);
   margin-right: 0.5rem;
 }
 
@@ -309,6 +298,13 @@ img {
   .contact__list {
     display: grid;
     grid-auto-flow: row;
+    gap: 2rem;
+  }
+
+  .contact__container,
+  .contact__list--link {
+    text-align: center;
+    justify-content: center;
   }
 }
 
