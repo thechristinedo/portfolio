@@ -5,26 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/styles.css">
-    <link rel="icon" href="src/assets/icon.png">
+    <link rel="icon" href="src/assets/cd_perfect.png">
     <script src="https://kit.fontawesome.com/b675451676.js" crossorigin="anonymous"></script>
     <script defer src="src/js/script.js"></script>
     <script defer src="src/js/trail.js"></script>
-    <title>Christine Do | Developer</title>
+    <title>Christine Do</title>
 </head>
 
 <body>
-    <nav class="navbar fw-bold fs-nav">
+    <nav class="navbar fw-bold fs-nav open-nav">
         <div class="navbar__container container">
-            <a href="#">Christine Do</a>
-            <ul class="navbar__list">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="navbar__list--button"><i class="theme--icon fa-regular fa-lightbulb"></i></li>
+            <a class="logo" href="#">Christine Do</a>
+            <div class="navbar__right">
+                <ul class="navbar__list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button type="button" class="navbar__theme">
+                    <i class="theme--icon fa-regular fa-lightbulb"></i>
+                </button>
+                <button type="button" class="navbar__open">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
                 <!-- <li class="navbar__list--button"><i class="theme--icon fa-regular fa-moon"></i></li> -->
-            </ul>
+            </div>
         </div>
     </nav>
+    <div class="navmenu fw-bold fs-nav hide">
+        <a class="navmenu__link" href="#about">About</a>
+        <a class="navmenu__link" href="#projects">Projects</a>
+        <a class="navmenu__link" href="#contact">Contact</a>
+    </div>
+
 
     <main>
         <section class="hero container">
@@ -40,8 +53,8 @@
                         class="fa-solid fa-location-dot"></i> Houston, TX
                 </p>
                 <div class="hero__contact fs-600">
-                    <button class="resume fw-semi-bold fs-body">Resume <i
-                            class="fa-regular fa-circle-down"></i></button>
+                    <button class="button fw-semi-bold fs-body"><i class="fa-regular fa-circle-down"></i>&nbsp
+                        Resume</button>
                     <a href="https://www.linkedin.com/in/thechristinedo/" target="_blank"><i
                             class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://github.com/thechristinedo" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -58,40 +71,52 @@
                     <h2 class="fs-secondary-header fw-bold">I'm Christine!</h2>
                     <p class="fs-body">I recently graduated from <span class=" text--custom">University of
                             Houston</span> with a
-                        Bachelor's in
+                        <span class="text--custom">Bachelor's degree</span> in
                         <span class="text--custom">Computer Science</span> a minor in
-                        <span class="text--custom">Mathematics</span>. I focus on design and user experiences when
-                        building a website, maintaining
-                        uniformity
-                        that is pleasing to the consumer's eye and striking a parallel with their interest. During my
-                        free
-                        time, I enjoy finding new challenges for me through seeking new hobbies and acheiving mastery.
+                        <span class="text--custom">Mathematics</span>. My expertise lies in <span class="fw-bold">web
+                            design</span> and <span class="fw-bold">user
+                            experience</span>, with a focus on creating visually cohesive and engaging websites that
+                        align with the
+                        target audience's preferences. I prioritize maintaining <span class="fw-bold">design
+                            uniformity</span> while delivering
+                        aesthetically pleasing <span class="fw-bold">digital experiences</span> that enhance <span
+                            class="fw-bold">user satisfaction</span>.
                     </p>
                 </div>
 
-                <div>
+                <div class="skills">
                     <div class="skills--div">
                         <h3 class="fs-500 fw-semi-bold">LANGUAGES</h3>
                         <ul>
-                            <li>C++</li>
                             <li>JavaScript</li>
                             <li>TypeScript</li>
+                            <li>C++</li>
                             <li>Python</li>
+                            <li>HTML/CSS</li>
+                            <li>R</li>
                         </ul>
                     </div>
                     <div class="skills--div">
-                        <h3 class="fs-500 fw-semi-bold">FRONTEND</h3>
+                        <h3 class="fs-500 fw-semi-bold">FRAMEWORKS / LIBRARIES</h3>
                         <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
                             <li>React</li>
+                            <li>Tailwind CSS</li>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>Next.js</li>
+                            <li>jQuery</li>
+                            <li>Flask</li>
                         </ul>
                     </div>
                     <div class="skills--div">
-                        <h3 class="fs-500 fw-semi-bold">BACKEND</h3>
+                        <h3 class="fs-500 fw-semi-bold">DEVELOPER TOOLS</h3>
                         <ul>
-                            <li>Flask</li>
+                            <li>MongoDB</li>
+                            <li>MySQL</li>
+                            <li>VS Code</li>
+                            <li>Git</li>
+                            <li>RStudio</li>
+                            <li>Postman</li>
                         </ul>
                     </div>
                 </div>
@@ -100,9 +125,85 @@
 
         <section id="projects" class="container padding-block-600">
             <div class="projects__container">
-                <h3 class="fs-section-header fw-semi-bold margin-bottom-400">"git clone Projects"</h3>
-                <h2 class="fs-secondary-header fw-bold">Error 404.</h2>
-                <h2 class="fs-secondary-header fw-bold">Projects not found.</h2>
+                <h3 class="fs-section-header fw-semi-bold margin-bottom-400">git clone Projects</h3>
+                <!-- <h2 class="fs-secondary-header fw-bold">Error 404.</h2>
+                <h2 class="fs-secondary-header fw-bold">Projects not found.</h2> -->
+                <h2 class="fs-secondary-header fw-bold margin-bottom-700 text-align-center">echo "Project Mode" >
+                    README.md</h2>
+                <div class="projects__grid">
+                    <div class="project__cell">
+                        <img />
+                        <h3 class="fs-500 fw-bold">Talket Out!</h3>
+                        <p>Fully functional chat application with real-time chat features, image
+                            uploads, and more!</p>
+                        <div class="project__cell--tech">
+                            <ul>
+                                <li>React</li>
+                                <li>TypeScript</li>
+                                <li>Tailwind CSS</li>
+                                <li>Node.js</li>
+                                <li>Express.js</li>
+                                <li>MongoDB</li>
+                            </ul>
+                        </div>
+                        <div class="project__links">
+                            <button type="button" class="button">
+                                <a href="https://www.github.com/thechristinedo/talket-out.com" target="_blank"><i
+                                        class="fa-brands fa-github"></i>&nbsp Source</a>
+                            </button>
+                            <button type="button" class="button button--website">
+                                <a href="https://www.talketout.com" target="_blank"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"
+                                        style="font-size: .875rem"></i>&nbsp Website</a>
+                            </button>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="project__cell">
+                        <img />
+                        <h3 class="fs-500 fw-bold">LeFurnish</h3>
+                        <p>Front-end e-commerce website with clean design, carousel, sorting and cart functions.</p>
+                        <div class="project__cell--tech">
+                            <ul>
+                                <li>React</li>
+                                <li>TypeScript</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
+                        <div class="project__links">
+                            <button type="button" class="button">
+                                <a href="https://github.com/thechristinedo/furnish" target="_blank"><i
+                                        class="fa-brands fa-github"></i>&nbsp Source</a>
+                            </button>
+                            <button type="button" class="button button--website">
+                                <a href="https://lefurnish.netlify.app/" target="_blank"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"
+                                        style="font-size: .875rem"></i>&nbsp Website</a>
+                            </button>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="project__cell">
+                        <img />
+                        <h3 class="fs-500 fw-bold">Pebbles Goes to Penguin Prison</h3>
+                        <p>A 2D top-down dungeon rogue like game featuring Pebbles, a penguin trying to escape from
+                            prison!</p>
+                        <div class="project__cell--tech">
+                            <ul>
+                                <li>Godot</li>
+                            </ul>
+                        </div>
+                        <div class="project__links">
+                            <button type="button" class="button">
+                                <a href="https://www.github.com/richerduong/pebbles-goes-to-penguin-prison"
+                                    target="_blank"><i class="fa-brands fa-github"></i>&nbsp Source</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

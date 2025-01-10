@@ -59,6 +59,7 @@ body {
 
 body {
   text-rendering: optimizeSpeed;
+  position: relative;
 }
 
 img,
@@ -96,8 +97,9 @@ p {
 
   min-height: 90px;
   transition: background-color 0.3s linear;
-  background-color: rgb(var(--main-bg-color));
+  background-color: rgba(var(--main-bg-color), 0.95);
   z-index: 10;
+  /* backdrop-filter: blur(2rem); */
 }
 
 .navbar__container {
@@ -107,20 +109,67 @@ p {
   height: 100%;
 }
 
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .navbar__list {
   display: flex;
   gap: 1.5rem;
   cursor: pointer;
 }
 
-.navbar__list a:hover,
-.navbar__list i:hover {
+.navbar__right a:hover,
+.navbar__right i:hover {
   transition: 0.3s;
   color: rgb(var(--secondary-color));
 }
 
+.navbar button {
+  background-color: transparent;
+  border: none;
+}
+
+.navbar i {
+  color: rgb(var(--main-color));
+}
+
+.navmenu {
+  position: sticky;
+  top: 90px;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  background-color: rgba(var(--main-bg-color), 0.95);
+  z-index: 9;
+  transition: background-color 0.3s linear;
+}
+
+.hide {
+  display: none;
+}
+
+.stop__scroll {
+  overflow: hidden;
+}
+
+@media (min-width: 50em) {
+  .navbar__open,
+  .navmenu {
+    display: none;
+  }
+}
+
 @media (max-width: 50em) {
-  .navbar ul {
+  .navbar__list {
     display: none;
   }
 }
@@ -148,7 +197,7 @@ p {
   gap: 1.5rem;
 }
 
-.resume {
+.button {
   cursor: pointer;
   background-color: transparent;
   color: rgb(var(--main-color));
@@ -157,15 +206,20 @@ p {
   border-radius: 0.5rem;
 }
 
-.resume:hover,
-.resume:hover i {
+.button:hover,
+.button:hover i {
   transition: 0.3s;
   background-color: rgb(var(--main-color));
   color: rgb(var(--main-bg-color));
 }
 
-.resume:hover {
+.button:hover {
   box-shadow: 0 0 3rem rgb(var(--secondary-color));
+}
+
+.button--website {
+  background-color: rgb(var(--main-color));
+  color: rgb(var(--main-bg-color));
 }
 
 .hero__side {
@@ -191,7 +245,7 @@ img {
 /*********************************************************************************/
 
 .about__container {
-  /* backdrop-filter: blur(2rem); */
+  backdrop-filter: blur(2rem);
   border: 0.15rem solid rgb(var(--main-color));
   padding: clamp(2rem, 10vw, 10rem);
 
@@ -217,26 +271,31 @@ img {
   z-index: -1;
 }
 
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .skills--div {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
 
   gap: 0.5rem;
   font-family: var(--ff-heading);
-  margin-bottom: 1rem;
 }
 
 .skills--div ul {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .skills--div li {
   font-size: 0.9rem;
   border: 1px solid rgba(var(--main-color), 0.25);
-  border-radius: 0.5rem;
-  padding: 0.1rem 0.7rem;
+  border-radius: 1rem;
+  padding: 0.25rem 0.75rem;
   text-align: center;
 }
 
@@ -247,6 +306,44 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.projects__grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(0, max-content)); */
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+}
+
+.project__cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid rgba(var(--main-color));
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.project__cell--tech ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project__cell--tech li {
+  font-size: 0.9rem;
+  border: 1px solid rgba(var(--main-color), 0.25);
+  border-radius: 1rem;
+  width: fit-content;
+  /* padding: 0.1rem 0.7rem; */
+  padding: 0.25rem 0.75rem;
+}
+
+.project__links {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
 }
 
 /*********************************************************************************/
@@ -305,10 +402,15 @@ img {
   .contact__list--link {
     text-align: center;
     justify-content: center;
+    font-size: 1rem;
   }
 }
 
 /*********************************************************************************/
+
+.text-align-center {
+  text-align: center;
+}
 
 .fw-bold {
   font-weight: var(--fw-bold);
