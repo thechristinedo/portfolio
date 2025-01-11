@@ -199,7 +199,8 @@ p {
 
 .button {
   cursor: pointer;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: rgb(var(--main-bg-color));
   color: rgb(var(--main-color));
   padding: 0.5rem 1rem;
   border: 1px solid rgba(var(--main-color), 0.25);
@@ -246,7 +247,9 @@ img {
 
 .about__container {
   backdrop-filter: blur(2rem);
-  border: 0.15rem solid rgb(var(--main-color));
+  /* border: 0.15rem solid rgb(var(--main-color)); */
+  background-color: rgba(var(--main-color), 0.1);
+  border-radius: 1rem;
   padding: clamp(2rem, 10vw, 10rem);
 
   display: flex;
@@ -291,12 +294,15 @@ img {
   gap: 0.5rem;
 }
 
-.skills--div li {
+.skills--div li,
+.project__cell--tech li {
   font-size: 0.9rem;
   border: 1px solid rgba(var(--main-color), 0.25);
   border-radius: 1rem;
   padding: 0.25rem 0.75rem;
   text-align: center;
+  background-color: rgb(var(--main-bg-color));
+  transition: all 0.3s;
 }
 
 /*********************************************************************************/
@@ -309,20 +315,39 @@ img {
 }
 
 .projects__grid {
-  display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(0, max-content)); */
+  display: flex;
+  flex-direction: column;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   justify-content: center;
   align-content: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .project__cell {
   display: flex;
   flex-direction: column;
+  /* border: 1px solid rgba(var(--main-color)); */
+  border-radius: 1rem;
+  background-color: rgba(var(--main-color), 0.1);
+  backdrop-filter: blur(2rem);
+  max-width: 750px;
   gap: 0.5rem;
-  border: 1px solid rgba(var(--main-color));
-  border-radius: 15px;
-  padding: 2rem;
+}
+
+.project__cell h3 {
+  padding-top: 2rem;
+}
+
+.project__cell h3,
+.project__cell p,
+.project__cell--tech,
+.project__links {
+  padding-inline: 2rem;
+}
+
+.project__cell--tech {
+  margin-top: 0.5rem;
 }
 
 .project__cell--tech ul {
@@ -331,19 +356,20 @@ img {
   gap: 0.5rem;
 }
 
-.project__cell--tech li {
-  font-size: 0.9rem;
-  border: 1px solid rgba(var(--main-color), 0.25);
-  border-radius: 1rem;
-  width: fit-content;
-  /* padding: 0.1rem 0.7rem; */
-  padding: 0.25rem 0.75rem;
-}
-
 .project__links {
   margin-top: 2.5rem;
+  margin-bottom: 2rem;
   display: flex;
   gap: 1rem;
+}
+
+.project__cell img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 
 /*********************************************************************************/
@@ -402,6 +428,7 @@ img {
   .contact__list--link {
     text-align: center;
     justify-content: center;
+    margin: 0 auto;
     font-size: 1rem;
   }
 }
