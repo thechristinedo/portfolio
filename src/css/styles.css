@@ -439,6 +439,10 @@ img {
   text-align: center;
 }
 
+.underline:hover {
+  text-decoration: underline;
+}
+
 .fw-bold {
   font-weight: var(--fw-bold);
 }
@@ -518,6 +522,10 @@ img {
 
 .margin-bottom-700 {
   margin-bottom: 3rem;
+}
+
+.padding-block-200 {
+  padding-block: 2rem;
 }
 
 .padding-block-600 {
