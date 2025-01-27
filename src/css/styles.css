@@ -97,9 +97,8 @@ p {
 
   min-height: 90px;
   transition: background-color 0.3s linear;
-  background-color: rgba(var(--main-bg-color), 0.95);
+  background-color: rgb(var(--main-bg-color));
   z-index: 10;
-  /* backdrop-filter: blur(2rem); */
 }
 
 .navbar__container {
@@ -137,8 +136,8 @@ p {
 }
 
 .navmenu {
-  position: sticky;
-  top: 90px;
+  position: fixed;
+  top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
@@ -148,7 +147,7 @@ p {
   align-items: center;
   gap: 1.5rem;
   cursor: pointer;
-  background-color: rgba(var(--main-bg-color), 0.95);
+  background-color: rgb(var(--main-bg-color));
   z-index: 9;
   transition: background-color 0.3s linear;
 }
@@ -539,6 +538,18 @@ img {
   left: 0;
 
   z-index: -1;
+}
+
+@media (pointer: coarse) {
+  .trail {
+    display: none;
+  }
+}
+
+@media (pointer: fine) {
+  .trail {
+    display: block;
+  }
 }
 
 .trail__path {

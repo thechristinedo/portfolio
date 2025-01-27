@@ -35,29 +35,21 @@ themeBtn.addEventListener("click", function () {
   toggleIcon();
 });
 
+/* when clicking navmenu button, opens mobile nav menu & makes the logo a navMenuLink */
 openNavBtn.addEventListener("click", function () {
   navMenu.classList.toggle("hide");
-  body.classList.toggle("stop__scroll");
   logo.classList.toggle("navmenu__link");
 });
 
+/* when logo is clicked, close the navmenu */
 logo.addEventListener("click", function () {
   if (!navMenu.classList.contains("hide")) {
     navMenu.classList.toggle("hide");
-    body.classList.toggle("stop__scroll");
   }
 });
 
 navMenuLink.forEach((link) => {
   link.addEventListener("click", function () {
     navMenu.classList.toggle("hide");
-    body.classList.toggle("stop__scroll");
   });
-});
-
-window.addEventListener("resize", function () {
-  body.classList.remove("stop__scroll");
-  if (window.innerWidth < 50 * 16 && !navMenu.classList.contains("hide")) {
-    navMenu.classList.toggle("hide");
-  }
 });
